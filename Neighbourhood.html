@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- <link rel="stylesheet" href="style.css">-->
+   <style>
+
+     #map {
+        bottom:0px;
+        height: 100%;
+        left: 362px;
+        position: absolute;
+        right: 0px;
+      }
+   
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+	  
+ <div>
+        <h1>Restuarants in Phoenix</h1>
+ </div>
+  <div>    
+  <input id="place-input" data-bind="value:inputText, valueUpdate: 'keyup'" >
+<hr>
+    <h3>Search results:</h3>
+<ul data-bind="foreach: searchResults">
+  <li data-bind="text: name"></li>
+</ul>
+<hr>
+<!--    <ul data-bind="foreach:list">
+     <li data-bind ="text:name,click:$parent.setList"></li></ul>
+    <div data-bind ="with:currentPlace" id="location"> </div>
+-->
+
+
+<div id="map"></div>
+</div>
+   <script async defer
+        src=
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyAEilFqZX8wvfe_GqnkzmGncUSOWSI2PaE&v=3&libraries=places,geometry&callback=initMap">
+    </script>
+    <script src='../node_modules/knockout/build/output/knockout-latest.js'></script>
+ <script src="Neighbourhood.js"></script>
+
+</body>
+</html>
